@@ -1,0 +1,162 @@
+/* Basic Reset & Body Style (Keeping your body gradient) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Your Body Gradient */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb, #90b4c5);
+  background-size: cover; /* Ensure it covers the whole page */
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Use min-height for flexibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container to center content (Keeping previous style) */
+.container {
+  padding: 20px;
+}
+
+/* Weather Card Styling */
+.weather-card {
+  background: linear-gradient(135deg, #5d9eec, #a37fd7); /* Example Gradient */
+  color: #ffffff; /* White text for contrast */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  min-width: 300px; /* Minimum width */
+  max-width: 400px; /* Maximum width */
+}
+
+/* Label Styling */
+label[for="fname"] {
+  display: block; /* Make label take its own line */
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* Input and Button Grouping */
+.input-group {
+  display: flex; /* Align input and button side-by-side */
+  margin-bottom: 20px;
+  gap: 5px; /* Space between input and button */
+}
+
+/* Input Field Styling */
+#fname {
+  flex-grow: 1; /* Allow input to take available space */
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounded corners */
+  font-size: 1em;
+  outline: none; /* Remove default focus outline */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  color: #333; /* Darker text inside input */
+}
+
+#fname:focus {
+  border-color: #5d9eec; /* Highlight border on focus */
+  box-shadow: 0 0 5px rgba(93, 158, 236, 0.5); /* Subtle glow on focus */
+}
+
+/* Button Styling */
+#goButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffff; /* White background */
+  color: #5d9eec; /* Color matching the gradient start */
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 20px; /* Matching rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+#goButton:hover {
+  background-color: #f0f0f0; /* Slightly darker on hover */
+  color: #4a8bd1;
+}
+
+#goButton:active {
+  transform: scale(0.98); /* Slight press effect */
+}
+
+#goButton:disabled {
+  background-color: #e0e0e0; /* Grey out when disabled */
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+
+/* Loading Indicator */
+.loader {
+  margin: 15px 0;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+}
+
+/* Result Display Styling */
+.location {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.temperature {
+  font-size: 2.8em; /* Make temperature prominent */
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.condition {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-transform: capitalize; /* e.g., "partly cloudy" -> "Partly cloudy" */
+}
+
+.icon img {
+  width: 64px; /* Control size via CSS */
+  height: 64px;
+  margin-bottom: 10px;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3)); /* Add shadow to icon */
+}
+
+.detail {
+  font-size: 1em;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.9); /* Slightly less bright than main text */
+}
+
+
+/* Responsive scaling - Using your provided styles */
+@media (min-width: 768px) {
+  .weather-card {
+      max-width: 500px;
+      padding: 60px; /* Your padding */
+  }
+}
+
+@media (max-width: 400px) {
+  .weather-card {
+      max-width: 90%;
+      padding: 25px 20px; /* Adjusted padding slightly for small screens */
+  }
+  /* Adjust text sizes slightly on very small screens */
+  .location { font-size: 1.8rem; }
+  .temperature { font-size: 2.5rem; }
+  .condition { font-size: 1.1rem; }
+}

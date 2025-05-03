@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Check</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <label for="fname">Location:</label>
+            <input type="text" id="fname" name="fname"> 
+            <button onclick="getvalue()" id="goButton">GO!</button>
+            <div id="location" class="location"></div>
+            <div id="temperature" class="temperature"></div>
+            <div id="condition_text" class="condition"></div>
+            <div id="image" class="icon"></div>
+            <div id="humidity" class="detail"></div>
+            <div id="wind" class="detail"></div>
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
